@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 //import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 
 const Todo = ({task,HandleDelete}) => {
-
+   
+    const[ischecked,SetisChecked]=useState(false)
+    function ChangeColor(){
+        SetisChecked(!ischecked)
+    }
+    
     return ( 
-        <div className="todo">
+        <form className={`todo ${ischecked ? 'checked' : ''}`}>
+            <input type="checkbox" id={task.id} onClick={ChangeColor}/>
             <p>{task.task}</p>
             <div>
             <FontAwesomeIcon icon={faTrash} onClick={()=>{
@@ -14,7 +20,7 @@ const Todo = ({task,HandleDelete}) => {
             }}/>
            
             </div>
-        </div>
+        </form>
      );
 }
  

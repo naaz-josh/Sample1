@@ -71,3 +71,7 @@ h1 {
   border-radius: 5px;
   margin-bottom: 2rem;
 }
+
+.todo.checked{
+  background-color: rgb(14, 168, 14);
+}
