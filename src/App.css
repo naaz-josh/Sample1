@@ -71,3 +71,17 @@ h1 {
   border-radius: 5px;
   margin-bottom: 2rem;
 }
+.addTodo {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #f1356d; /* Border color */
+  color: #ffffff; /* Text color */
+  background-color: #f1356d; /* Background color */
+  border-radius: 3px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
