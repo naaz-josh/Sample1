@@ -3,6 +3,9 @@ import TodoForm from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";
 import Todo from "./Todo";
 
+//import TodoDetails from "./TodoDetails";
+import { Link } from 'react-router-dom';
+
 
 const TodoWrapper = () => {
 
@@ -22,11 +25,12 @@ const TodoWrapper = () => {
             
             <h1>Get Things Done !</h1><TodoForm addTodo={addTodo}></TodoForm>
             {todoList.map((todo,index)=>
-                <Todo  task={todo} key={index} HandleDelete={HandleDelete}/>
-                
+
+            <Link to={`/todo/ ${todo.id}`}>
+            <Todo  task={todo} key={index} HandleDelete={HandleDelete}/></Link>
+)}
             
-            )}
-        
+            
         </div>
     );
 
