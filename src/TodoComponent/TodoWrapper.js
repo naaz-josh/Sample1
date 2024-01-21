@@ -5,6 +5,7 @@ import Todo from "./Todo";
 
 
 
+
 const TodoWrapper = () => {
    
 
@@ -20,10 +21,12 @@ const TodoWrapper = () => {
     }
     return (
         <div className="todowrapper">
-            
+         
             <h1>Get Things Done !</h1><TodoForm addTodo={addTodo}></TodoForm>
             {todoList.map((todo,index)=>
                 <Todo  task={todo} key={index} HandleDelete={HandleDelete}/>
+            
+                
                 
             
             )}
