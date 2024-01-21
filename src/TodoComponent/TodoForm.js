@@ -13,7 +13,9 @@ const TodoForm = ({addTodo}) => {
        
     }
     return ( 
+  
         <form  onSubmit={handleSubmit} className="TodoForm">
+            
             <input type="text" className="todo-input" value={value} placeholder="What is the task?" onChange={
                 (e)=>{
                    setValue(e.target.value)
@@ -21,7 +23,9 @@ const TodoForm = ({addTodo}) => {
             }/>
             <button type="submit" className="todo-btn" >Add Task</button>
 
+
         </form >
+        
      );
 }
  
