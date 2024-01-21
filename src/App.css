@@ -25,7 +25,7 @@ h1 {
 }
 
 .todowrapper {
-   background-color: white;
+  background-color: white;
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
@@ -75,3 +75,46 @@ h1 {
 .todo.checked{
   background-color: rgb(14, 168, 14);
 }
+.search{
+  width: 100%;
+}
+.searchInput {
+  margin-top: 105px;
+  display: flex;
+}
+
+.searchInput input {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 14px;
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+}
+
+.searchIcon {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+.searchResults{
+  margin-top: 5px;
+  width: 300px;
+  height: 50px;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-block: hidden;
+  font-size: small;
+  text-align: left;
+}
+.sortIcon{
+  
+  margin-left: 5px;
+ 
+}
+
