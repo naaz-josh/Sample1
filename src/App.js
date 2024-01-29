@@ -1,11 +1,12 @@
 import './App.css';
+import Registration from './FormComponent/Registeration';
 import TodoWrapper from './TodoComponent/TodoWrapper';
 
 function App() {
   return (
     <div className="App">
- 
-      <TodoWrapper/>
+    <Registration></Registration>
+      {/* <TodoWrapper/> */}
     </div>
   );
 }
