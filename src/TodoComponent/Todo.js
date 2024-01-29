@@ -1,18 +1,27 @@
-import React, { useState } from 'react'
+import React, { useReducer} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 //import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 
+const reducer=(state,action)=>{
+      switch(action.type){
+        case "Checked": return {...state,checked:state.checked=true}
+        case "UnChecked": return {...state,checked:state.checked=false}
+     
+        default: return state
+      }
+}
 const Todo = ({task,HandleDelete}) => {
-   
-    const[ischecked,SetisChecked]=useState(false)
+    
+    const [state,dispatch]= useReducer(reducer,{checked:false})
+    // const[ischecked,SetisChecked]=useState(false)
     function ChangeColor(){
-        SetisChecked(!ischecked)
+        dispatch({type:"Checked"})
     }
     
     return ( 
-        <form className={`todo ${ischecked ? 'checked' : ''}`}>
-            <input type="checkbox" id={task.id} onClick={ChangeColor}/>
+        <form className={`todo ${state.checked===true ? 'checked' : ''}`}>
+            <input type="checkbox" id={task.id} onClick={ChangeColor} />
             <p>{task.task}</p>
             <div>
             <FontAwesomeIcon icon={faTrash} onClick={()=>{
