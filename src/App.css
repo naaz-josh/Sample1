@@ -75,12 +75,39 @@ h1 {
 .todo.checked{
   background-color: rgb(14, 168, 14);
 }
-.search{
-  width: 100%;
+.Filter-Component{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 .searchInput {
   margin-top: 105px;
   display: flex;
+ 
+  
+}
+.searchInput input{
+  background-color: white;
+  border: 0.5px solid black;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 14px;
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+}
+.sort{
+  margin-top: 105px;
+  display: flex;
+ margin-left: 10px;
+}
+.status{
+  margin-top: 105px;
+  display: flex;
+  margin-left: 10px;
+ 
 }
 
 .searchInput input {
